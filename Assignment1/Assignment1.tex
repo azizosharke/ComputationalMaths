@@ -1,0 +1,620 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{times}
+\usepackage{amsfonts,amsmath,amssymb,amsthm,etoolbox}
+\usepackage{ mathrsfs }
+\usepackage{multicol}
+\usepackage{empheq}
+\usepackage{times}
+
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{bm}
+\usepackage{float}
+\usepackage{ dsfont }
+\usepackage{ upgreek }
+\newcommand{\tildea}[1]{\overset{\sim}{#1}}
+\usepackage{ latexsym }
+\usepackage{array}
+\usepackage{hhline}
+\newcolumntype{M}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\usepackage{adjustbox}
+\usepackage{graphicx}
+\usepackage{geometry}
+\newgeometry{
+    top=1in,
+    bottom=1in,
+    right=1in,
+    left=0.75in,
+} 
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.75em}
+%\renewcommand{\baselinestretch}{1.5}
+
+\newlength\dlf  % Define a new measure, dlf
+\newcommand\alignedbox[2]{
+% Argument #1 = before & if there were no box (lhs)
+% Argument #2 = after & if there were no box (rhs)
+&  % Alignment sign of the line
+{
+\settowidth\dlf{$\displaystyle #1$}  
+    % The width of \dlf is the width of the lhs, with a displaystyle font
+\addtolength\dlf{\fboxsep+\fboxrule}  
+    % Add to it the distance to the box, and the width of the line of the box
+\hspace{-\dlf}  
+    % Move everything dlf units to the left, so that & #1 #2 is aligned under #1 & #2
+\boxed{#1 #2}
+    % Put a box around lhs and rhs
+}
+}
+
+\usepackage{xcolor}
+\definecolor{bookColor}{cmyk}{0,0,0,0.90} 
+\definecolor{shadecolor}{rgb}{0.9,0.9,0.9}
+
+\usepackage{tikz,tikz-cd} 
+\usetikzlibrary{shapes,shapes.geometric,shadings,shadows,shapes.arrows,positioning,arrows.meta,patterns}
+\usetikzlibrary{shadows.blur}
+
+        
+\title{Multiple Choice Questions}
+
+\author{Name :}
+\date{\today}
+
+
+\begin{document} 
+
+
+\maketitle
+
+% Please enter your answers (A – E) and upload with your type written solutions as a .docx file
+
+\subsection*{Q 1 Answer: D}
+
+\(\begin{array}{l}
+    >> x=[7:9; \quad 6 \quad 12 \quad 19;-2:0]; \\
+    y=x(3,:); \\
+    w=y(1,3); \\
+    \text{size}(w^\prime)
+\end{array} \\ [5mm]
+\begin{array}{lll} 
+    \text{ans} & = & \\
+        & 1 & 1 \\ [5mm]
+       
+\end{array}\)
+
+\subsection*{Q 2 Answer: C}
+
+\(
+\begin{array}{l}
+     \text{syms} \quad \color{violet} x \\
+     c = \text{sym2poly}(6*x\text{ \textasciicircum }3 + 12*x + 12) \\
+     b = \text{sym2poly}(6*x\text{ \textasciicircum }2 + 12*x)\\ [3mm]
+     >> \text{Q2}
+\end{array} \\ [2mm]
+\begin{array}{cccccc}
+       \text{c} & = & & && \\
+        & & 6 & 0 & 12 & 12 \\ [3mm]
+      \text{b} & = & & && \\
+        & & 6 & 12 & 0 &   
+\end{array}
+\)
+
+
+\clearpage
+
+\subsection*{Q 3 Answer: D}
+
+\(\begin{array}{l}
+    >> x=[7:9; \quad 6 \quad 12 \quad 19;-2:0]; \\
+    y=x(3,:); \\
+    w=y(1,3); \\
+    \text{size}(w^\prime)
+\end{array} \\ [5mm]
+\begin{array}{lll} 
+    \text{ans} & = & \\
+        & 1 & 1 \\ [5mm]
+ 
+\end{array}\)
+
+\subsection*{Q 4 Answer: A}
+
+function = $\cos x$
+
+$\therefore$ value of $\cos(1) = 0.540302$
+
+\underline{Formula}
+\begin{align*}
+    F(x) &= \overbrace{f(x_0)}^{\text{Initial value}} + (x-x_0) f^\prime(x_0) + \dfrac{(x-x_0)^2}{2!}  f^{\prime\prime}(x_0) + \dfrac{(x-x_0)^3}{3!} f^{\prime\prime\prime}(x_0) + \ldots + R_n(x)
+\end{align*}
+
+\[\begin{array}{rrrrrrrrr}
+    f(x) &=& \cos(x) &,& && \\
+    x_0 &=& a = 0   & &  && \\
+    f^{\prime}(x) &=& -\sin(x) &,& f^\prime(0) &=& -\sin(0) &=& 0 \\
+    f^{\prime\prime}(x) &=& -\cos(x) &,& f^{\prime\prime}(0) &=& -\cos(0) &=& -1 \\
+    f^{\prime\prime\prime}(x) &=& \sin(x) &,& f^{\prime\prime\prime}(0) &=& \sin(0) &=& 0 \\
+    f^{\prime\prime\prime\prime}(x) &=& \cos(x) &,& f^{\prime\prime\prime\prime}(0) &=& \cos(0) &=& 1 \\
+\end{array}\]
+
+
+By Taylor's series equation at $a = 0$
+
+\[\begin{array}{cll}
+    \cos x &=& 1 - \dfrac{x^2}{2!} + \dfrac{x^4}{4!} - \dfrac{x^6}{6!} + \dfrac{x^2}{8!} - \dfrac{x^{10}}{10!} + \ldots \text{ etc} \\
+    x &=& 1 \\
+    & \Rightarrow &\\
+    \cos 1 &=& P_n(1) = 1 - \dfrac{1}{2!} + \dfrac{1}{4!} - \dfrac{1}{6!} + \dfrac{1}{8!} - \dfrac{1}{10!} + \ldots \text{ etc}
+\end{array}\]
+
+For $\varepsilon = 1.0 \times 10^{-5} = 0.00001$ in which $|\cos(1) - P_n(1)| \leq \varepsilon.$
+
+\[\begin{array}{cll}
+    \Rightarrow & P_3(1) & 1 - \dfrac{1}{2!} + \dfrac{1}{4!} = 0.54166667  \\ [4mm]
+    \Rightarrow & P_4(1) & 1 - \dfrac{1}{2!} + \dfrac{1}{4!} - \dfrac{1}{6!} = 0.540277778 \\ [4mm]
+    \Rightarrow & P_5(1) & 1 - \dfrac{1}{2!} + \dfrac{1}{4!} - \dfrac{1}{6!} + \dfrac{1}{8!} = 0.54030257941
+\end{array}\]
+
+\[\begin{array}{cll}
+     |\cos 1 - P_5(1)| &=& |0.5403023059 - 0.5403025794| \\
+     &=& 0.0000002735 < \varepsilon.
+\end{array}\]
+
+Hence min degree is $n = 5$.
+\[\Rightarrow \boxed{A}\]
+
+\subsection*{Q 5 Answer: C}
+
+The minimum number of iteration of the bisection method that are needed to audience accuracy at $\varepsilon = 0.001$
+I found the formula i am using on stack exchange
+
+\[\begin{array}{rl}
+    n \geq&  \dfrac{\log (b-a) - \log(\varepsilon)}{\log 2} \\ [3mm]
+    \Rightarrow & a=  0.5, \quad b = 2, \quad \varepsilon = 0.001 \\ [3mm]
+    &  \dfrac{\log (2-0.5) - \log(0.001)}{\log 2} = 10.55 \\  [3mm]
+    n  \geq &  10.55 \\ [3mm]
+     \Rightarrow & \text{11 iterations} \\ [3mm]
+     \Rightarrow & \boxed{C}
+\end{array}\]
+
+\subsection*{Q 6 Answer: E}
+
+\[A = \left(\begin{matrix} -1 & 1 & -4 \\ 2 & 2 & 1 \\ 3 & 3 & 2  \end{matrix}\right)\]
+
+\[\begin{array}{rrr|rrr} -1 & 1 & -4 & 1 & 0 & 0 \\ 2 & 2 & 1 & 0 & 1 & 0 \\ 3 & 3 & 2 & 0 & 0 & 1\end{array}\]
+
+
+\( R1 \rightarrow \dfrac{R1}{-1} \)
+\[\begin{array}{rrr|rrr} 1 & -1 & 4 & -1 & 0 & 0 \\ 2 & 2 & 1 & 0 & 1 & 0 \\ 3 & 3 & 2 & 0 & 0 & 1  \end{array}\]
+
+\( R2 \rightarrow R2 - 2 R1 \quad\quad\quad 2R1 = 2 - 2 \quad 8 \)
+\[\begin{array}{rrr|rrr} 1 & -1 & 4 & -1 & 0 & 0 \\ 0 & 4 & -7 & 2 & 1 & 0 \\ 3 & 3 & 2 & 0 & 0 & 1 \end{array}\]
+
+\( R3 \rightarrow R3 - 3R1 \quad\quad\quad 3R1 \rightarrow 1 - 3 \quad 12 \)
+\[\begin{array}{rrr|rrr} 1 & -1 & 4 & -1 & 0 & 0 \\ 0 & 4 & 7 & 2 & 1 & 0 \\ 0 & 6 &- 10 & 3 & 0 & 1  \end{array}\]
+
+\( R2 \rightarrow \dfrac{R2}{4}  \)
+\[\begin{array}{rrr|rrr} 1 & -1 & 4 & -1 & 0 & 0 \\ 0 & 1 & -\frac{7}{4} & \frac{1}{2} & \frac{1}{4} & 0 \\ 0 & 6 & -10 & 3 & 0 & 1  \end{array}\]
+
+\( R3 \rightarrow R3 - 6R2 \quad\quad 6R2 = 0 \: 6 \: \cdot \dfrac{21}{2} \)
+\[\begin{array}{rrr|rrr} 1 & -1 & 4 & -1 & 0 & 0 \\ 0 & 1 & -\frac{1}{4} & \frac{1}{2} & \frac{1}{4} & 0 \\ 0 & 0 & 0.5 & 0 & -\frac{3}{2} & 1  \end{array}\]
+
+\( R3 \rightarrow \dfrac{R3}{1/2} \)
+\[\begin{array}{rrr|rrr} 1 & -1 & 4 & -1 & 0 & 0 \\ 0 & 1 & -\frac{7}{4} & \frac{1}{2} & \frac{1}{4} & 0 \\ 0 & 0 & 1 & 0 & -3 & 2  \end{array}\]
+
+\( R2 \rightarrow R2 + \frac{7}{4} R3 \)
+\[\begin{array}{rrr rrrr} 1 & -1 & 4 && -1 & 0 & 0 \\ 0 & 1 & 0 && \frac{1}{2} & -5 & \frac{7}{2} \\ 0 & 0 & 1 && 0 & -3 & 2\end{array}\]
+
+\( R1 \rightarrow R1 + R2  \)
+\[\begin{array}{rrrrrrr} 1 & 0 & 4 && -\frac{1}{2} & 5 & \frac{7}{2} \\ [2mm] 0 & 1 & 0 && \frac{1}{2} & -5 & \frac{7}{2} \\ [2mm]
+0 & 0 & 1 && 0 & -3 & 2\end{array}\]
+
+\( R1 \rightarrow R1 - 4R3 \)
+\[\begin{array}{rrr|rrr} 1 & 0 & 0 & -\frac{1}{2} & 7 & -\frac{9}{2} \\ [2mm] 0 & 1 & 0 & \frac{1}{2} & -5 & \frac{7}{2} \\ [2mm] 0 & 0 & 1 & 0 & -3 & 2 \end{array}\]
+
+\[ \begin{array}{rl}
+\Rightarrow & \left[\begin{array}{rrr} -\frac{1}{2} & 7 & \frac{-9}{2} \\ [2mm] \frac{1}{2} & -5 & \frac{7}{2} \\ [2mm] 0 & -3 & 2 \end{array}\right] \\ [8mm]
+\Rightarrow & \boxed{E}
+\end{array}\]
+
+\clearpage
+\subsection*{Q 7 Answer: D}
+
+\[\begin{pmatrix} 0 & 4 & 1 \\ 1 & 1 & 3 \\ 2 & -2 & 1 \end{pmatrix} \begin{pmatrix} x_1 \\ x_2 \\ x_3\end{pmatrix} = \begin{pmatrix} 9 \\ 8 \\ -1\end{pmatrix}\]
+
+\[ \left[\begin{array}{rrr|r} 0 & 4 & 1 & 9 \\ 1 & 1 & 3 & 6 \\ 2 & -2 & 1 & -1 \end{array}\right] \]
+
+\( R2 \longleftrightarrow R1 \)
+\[ \left(\begin{array}{rrr|r} 1 & 1 & 3 & 6 \\ 0 & 4 & 1 & 9 \\ 2 & -2 & 1 & -1 \end{array}\right) \]
+
+\( R3 \rightarrow R3 - 2R1 \)
+\[ \begin{array}{rrrr} 1 & 1 & 3 & 6 \\ 0 & 4 & 1 & 9 \\ 0 & -4 & -5 & -13 \end{array} \]
+
+\( R1 \rightarrow 4R1 - R2 \)
+\[ \left[\begin{array}{rrr|r} 4 & 0 & 11 & 15 \\ 0 & 4 & 1 & 9 \\ 0 & -4 & -5 & -13 \end{array}\right] \]
+
+\( R3 \rightarrow R3 + R2 \)
+\[ \left[\begin{array}{rrr|r} 4 & 0 & 11 & 15 \\ 0 & 4 & 1 & 9 \\ 0 & 0 & -4 & -4 \end{array}\right] \]
+
+\( R2 \rightarrow 4R2 + R3 \)
+\[ \left[\begin{array}{rrr|r} 4 & 0 & 11 & 15 \\ 0 & 16 & 0 & 32 \\ 0 & 0 & -4 & -4 \end{array}\right] \]
+
+\( R1 \rightarrow 4R1 + 11R3 \)
+\[ \left(\begin{array}{rrr|r} 16 & 0 & 0 & 16 \\ 0 & 16 & 0 & 32 \\ 0 & 0 & -4 & -4 \end{array}\right) \]
+
+\( R2 \rightarrow \dfrac{R2}{16} \)
+\[ \left[\left.\begin{array}{rrr|r} 16 & 0 & 0 & 16 \\ 0 & 1 & 0 & 2 \\ 0 & 0 & -4 & -4 \end{array}\right)\right. \]
+
+\( R1 \rightarrow \dfrac{R1}{16} \)
+\[ \left(\begin{array}{rrr|r} 1 & 0 & 0 & 1 \\ 0 & 1 & 0 & 2 \\ 0 & 0 & -4 & -4 \end{array}\right) \]
+
+\( R3 \rightarrow \dfrac{R3}{-4} \)
+\[ \begin{array}{rrr|r} 1 & 0 & 0 & 1 \\ 0 & 1 & 0 & 2 \\ 0 & 0 & 1 & 1  \end{array} \]
+
+\[\begin{array}{c} \hline \\
+    \therefore (x_1,x_2,x_3) = (1,2,1)^T \\ [3mm]
+    \Rightarrow \boxed{D}
+\end{array}\]
+
+\subsection*{Q 8 Answer: E}
+
+\[\begin{pmatrix} 1 & 8 & 6 \\ 7 & 3 & 1 \\ 6 & 7 & 12 \end{pmatrix}\begin{pmatrix} x_1 \\ x_2 \\ x_3  \end{pmatrix} = \begin{pmatrix} 6 \\ -8 \\ 2 \end{pmatrix}\]
+
+\[\begin{array}{ccccccc}
+     x_1 & + & 8x_2 & + &  6x_3 & = & 6 \\
+    7x_1 & + & 3x_2 & + &   x_3 & = & -8 \\
+    6x_1 & + & 7x_2 & + & 12x_3 & = & 2 
+\end{array}\]
+
+\[\begin{array}{ccccccc|c}
+     7x_1 & + & 3x_2 & + &   x_3 & = & -8 & 1 \\
+      x_1 & + & 8x_2 & + &  6x_3 & = &  6 & 2 \\
+     6x_1 & + & 7x_2 & + & 12x_3 & = &  2 & 3
+\end{array}\]
+
+From 1
+\[\begin{array}{cccccccclc}
+     x_1 =& \frac{1}{7}  & [ & -8 &-& 3x_2 &-& x_3  & ] & 4 \\ [2mm]
+     x_2 =& \frac{1}{8}  & [ & 6  &-& x_1  &-& 6x_3 & ] & 5 \\ [2mm]
+     x_3 =& \frac{1}{12} & [ & 2  &-& 6x_1 &-& 7x_2 & ] & 6 \\
+\end{array}\]
+
+\underline{\textit{initial approximation}:}
+\[ x_1^{(0)} = 2; x_2^{(0)} = 4, x_3^{(0)} = 5  \]
+\begin{align*}
+    x_1^{(1)} &= \frac{1}{7} \left[ - 8 - 3(4) - 5 \right] \\ 
+              &= \frac{1}{7} \left[-8 -12-5 \right] \\
+              &= \frac{25}{7} \\
+    \alignedbox{x_1^{(1)}}{= -3.5714} \\ 
+    x_2^{(1)} &= \frac{1}{8} \left[ 6 - x_1^{(1)} - 6 x_3^{(0)}  \right] \\ 
+              &= \frac{1}{8} \left[ 6 + 3.5714 - 6 (5)  \right] \\
+    \alignedbox{x_2^{(1)}}{= -2.5535}  \\ 
+    x_3^{(1)} &= \frac{1}{12} \left[ 2 - 6 x_1^{(1)} - 7x_2^{(1)}  \right] \\ 
+              &= \frac{1}{12} \left[ 2 - 6 (-3.5714) - 7(-2.5535) \right] \\
+    \alignedbox{x_3^{(1)}}{= 3.4419}
+\end{align*}
+
+\underline{\textit{2$^{nd}$ iteration}}
+\begin{align*}
+    x_1^{(2)} &= \frac{1}{7} \left[  - 8 - 3x_2^{(1)} - x_3^{(1)} \right] \\ 
+              &= \frac{1}{7} \left[ -8 -3(-2.5535) - 3.4419 \right] \\
+              &= \frac{1}{7} \left[ -3.7814 \right] \\
+              \alignedbox{x_1^{(2)}}{= -0.5402} \\ 
+    x_2^{(2)} &= \frac{1}{8} \left[  6 - x_1^{(2)} - 6 x_3^{(1)}  \right] \\ 
+              &= \frac{1}{8} \left[  6 + 0.5402 - 6 (3.4419)  \right] \\
+              \alignedbox{x_2^{(2)}}{= -1.7639}  \\ 
+    x_3^{(2)} &= \frac{1}{12} \left[  2 - 6 x_1^{(2)} - 7x_2^{(2)}  \right] \\ 
+              &= \frac{1}{12} \left[  2 - 6 (-0.5402) - 7(1.7639) \right] \\
+              &= \frac{1}{12} \left[ 17.5885 \right] \\
+              \alignedbox{x_3^{(2)}}{= 1.4657}
+\end{align*}
+
+
+\underline{\textit{3$^{rd}$ iteration}}
+\begin{align*}
+    x_1^{(3)} &= \frac{1}{7} \left[  - 8 - 3x_2^{(2)} - x_3^{(2)} \right] \\ 
+              &= \frac{1}{7} \left[ -8 -3(-1.7639) - 1.4657 \right] \\
+              \alignedbox{x_1^{(3)}}{= -0.5962} \\ 
+    x_2^{(3)} &= \frac{1}{8} \left[  6 - x_1^{(3)} - 6 x_3^{(2)}  \right] \\ 
+              &= \frac{1}{8} \left[  6 - (-0.5962) - 6 (1.4657)  \right] \\
+              \alignedbox{x_2^{(3)}}{= -0.2747 }  \\ 
+    x_3^{(3)} &= \frac{1}{12} \left[  2 - 6 x_1^{(3)} - 7x_2^{(3)}  \right] \\ 
+              &= \frac{1}{12} \left[  2 - 6 (-0.5962) - 7(-0.2747) \right] \\
+              \alignedbox{x_3^{(3)}}{= 0.6021 }
+\end{align*}
+
+Thus, $x_1 = 0.5962;\: x_2 = -0.2747;\: x_3 = 0.6021$
+\[ \Rightarrow \boxed{E} \]
+
+\clearpage
+\subsection*{Q 9 Answer: B}
+
+\[ \begin{array}{rl}
+A =& \begin{matrix}
+    2 & 3 & -1 \\
+    4 & 4 & -3 \\
+   -2 & 3 & -1
+\end{matrix} \\
+A =& LU \\ [5mm]
+\begin{vmatrix} 2 & 3 & -1 \\ 4 & 4 & -3 \\-2 & 3 & -1 \end{vmatrix} =& \begin{vmatrix} l_{11} & 0 & 0 \\
+l_{21} & l_{22} & 0 \\ l_{31} & l_{32} & l_{33} \end{vmatrix} \begin{vmatrix} 1 & u_{12} & u_{13} \\ 0 & 1 & u_{23} \\ 0 & 0 & 1 \end{vmatrix} \\ [10mm]
+\begin{vmatrix} 2 & 3 & -1 \\ 4 & 4 & 3 \\-2 & 3 & -1 \end{vmatrix} =& \begin{vmatrix} 
+l_{11} & l_{11}u_{12} & l_{11}u_{13} \\
+l_{21} & l_{21}u_{12}+l_{22} & l_{21}u_{13} + l_{22}u_{23} \\ 
+l_{31} & l_{31}u_{12} + l_{32} & l_{31}u_{13} + l_{32}u_{23} + l_{33}\end{vmatrix}
+\end{array}
+\]
+
+which implies 
+\begin{align*}
+    l_{11} &= 2 \\
+    l_{11}u_{12} &= 3 \rightarrow u_{12} = 1.5 \\
+    l_{11} u_{13} &= -1 \rightarrow u_{13} = -0.5 \\
+    l_{21} &= 4 \\
+    l_{21} u_{12}+l_{22} &= 4 \Rightarrow l_{22} = -2 \\
+    l_{21} u_{13} + l_{22} u_{23} &= -3 \Rightarrow u_{23} = 0.5 \\
+    l_{31} &= -2 \\
+    l_{31} u_{12} + l_{32} &= 3 \Rightarrow l_{32} = 6 \\
+    l_{31} u_{13} + l_{32} u_{23} + + l_{33} &= -1 \Rightarrow l_{33} = -5
+\end{align*}
+
+\[
+\begin{array}{rcl}
+\begin{vmatrix}
+2 & 3 & -1 \\
+4 & 4 & -3 \\
+-2 & 3 & -1
+\end{vmatrix} &=& 
+\begin{vmatrix}
+2 & 0 & 0 \\
+4 & 2 & 0 \\
+-2 & 6 & -5
+\end{vmatrix} \times 
+\begin{vmatrix}
+1 & 1.5 & -0.5 \\
+0 & 1 & 0.5 \\
+0 & 0 & 1
+\end{vmatrix} \\ [8mm]
+L &=& 
+\begin{bmatrix}
+2 & 0 & 0 \\
+4 & -2 & 0 \\
+-2 & 6 & -5
+\end{bmatrix} \\ [8mm]
+&=&
+\begin{bmatrix}
+2 & 0 & 0   &&&&& 1 & 0 & 0 \\
+4 & -2 & 0  &&&&& 0 & 1 & 0 \\
+-2 & 6 & -5 &&&&& 0 & 0 & 1
+\end{bmatrix}
+\end{array} 
+\]
+
+\[ \dfrac{R1}{2} \rightarrow \begin{bmatrix} 1 & 0 & 0 &&&& \frac{1}{2} & 0 & 0 \\ 4 & -2 & 0 &&&& 0 & 1 & 0 \\ -2 & 6 & -1 &&&& 0 & 0 & 1 \end{bmatrix} \]
+
+\( R2 \rightarrow R2 - 4R1 \)
+\[ \begin{array}{rrrrrrr}
+-4 & -2 & 0 && 0 & 1 & 0 \\
+-4 & 0 & 0 && 2 & 0 & 0 \\ \hline
+0 & -2 & 0 && -2 & 1 & 0
+\end{array} \]
+
+
+\( R3 \rightarrow R3 - 2R1 \)
+\[ \begin{array}{rrrrrrr}
+-2 & 6 & -5 && 0 & 0 & 1 \\
+-2 & 0 & 0 && -1 & 0 & 0 \\ \hline
+0 & 6 & -5 && 1 & 0 & 1
+\end{array} \]
+\[\begin{array}{rrrrrrrr}
+    \Rightarrow  &1 & 0 & 0 && \frac{1}{2} & 0 & 0 \\ [1mm]
+    & 0 & 1 & 0 && 1 & -\frac{1}{2} & 0 \\ [1mm]
+    & 0 & 6 & -5 && 1 & 0 & 1
+\end{array}\]
+
+\( R3 - 6R3 \)
+\[ \begin{array}{rrrrrrr}
+0 & 6 & -5 && 1 & 0 & 1 \\
+0 & 6 & 0 && 6 & -3 & 0 \\ \hline
+0 & 0 & -5 && -5 & 3 & 1
+\end{array} \]
+\[\begin{array}{rrrrrrrr}
+    \Rightarrow  &1 & 0 & 0 && \frac{1}{2} & 0 & 0 \\ [1mm]
+    & 0 & 1 & 0 && 1 & -\frac{1}{2} & 0 \\ [1mm]
+    & 0 & 0 & -5 && -5 & 3 & 1
+\end{array}\]
+
+\( R3 \rightarrow \dfrac{R3}{-5} \)
+\[\begin{array}{rlrrrrrr}
+    \Rightarrow  & 1 & 0 & 0 && \frac{1}{2} & 0 & 0 \\ [2mm]
+    & 0 & 1 & 0 && 1 & -\frac{1}{2} & 0 \\ [2mm]
+    & 0 & 0 & 1 && 1 & -\frac{3}{5} & -\frac{1}{5} 
+\end{array}\]
+
+\[
+\begin{array}{rl}
+\Rightarrow & L^{-1} \Rightarrow \\
+& \begin{vmatrix}
+\frac{1}{2} & 0 & 0 \\
+1 & -\frac{1}{2} & 0 \\
+1 & -\frac{3}{5} & -\frac{1}{5} 
+\end{vmatrix} \\ [8mm]
+u =& 
+\begin{bmatrix}
+1 & 1.5 & 0.5 \\
+0 & 1 & 0.5 \\
+0 & 0 & 1
+\end{bmatrix} \\ [8mm]
+u^{-1} =& 
+\begin{bmatrix}
+1 & 1.5 & 0.5 && 1 & 0 & 0 \\
+0 & 1 & 0.5 && 0 & 1 & 0 \\
+0 & 0 & 1 && 0 & 0 & 1
+\end{bmatrix}
+\end{array}
+\]
+
+
+\( R1 \rightarrow R1 - \dfrac{3}{2} R_2 \)
+\[ \begin{array}{rrrrrrr}
+1 & \frac{3}{2} & \frac{1}{2} && 1 & 0 & 0 \\ [2mm]
+0 & \frac{3}{2} & \frac{3}{4} && 0 & \frac{3}{2} & 0 \\ [-3mm]
+&&&&&& \\ \hline
+&&&&&& \\  [-3mm]
+1 & 0 & -\frac{1}{4} && 0 & -\frac{3}{2} & 0
+\end{array} \]
+
+\( R1 \rightarrow R1 + \dfrac{1}{4} R_3 \)
+\[ \begin{array}{rrrrrrr}
+1 & 0 & -\frac{1}{4} && 1 & -\frac{3}{2} & 0 \\ [2mm]
+0 & 0 & \frac{1}{4} && 0 & 0 & \frac{1}{4} \\ [-3mm]
+&&&&&& \\ \hline
+&&&&&& \\  [-3mm]
+1 & 0 & 0 && 1 & -\frac{3}{2} & \frac{1}{4}
+\end{array} \]
+
+\( R2 \rightarrow R2 - \dfrac{1}{2} R_3 \)
+\[ \begin{array}{rrrrrrr}
+0 & 1 & \frac{1}{2} && 0 & 1 & 0 \\ [2mm]
+0 & 0 & \frac{1}{2} && 0 & 0 & \frac{1}{2} \\ [-3mm]
+&&&&&& \\ \hline
+&&&&&& \\  [-3mm]
+0 & 1 & 0 && 0 & 1 & -\frac{1}{2}
+\end{array} \]
+
+\[\begin{array}{rcl}
+    \therefore U^{-1} &=& \begin{bmatrix} 1 & -1.5 & 1.25 \\ 0 & 1 & -0.5 \\ 0 & 0 & 1 \end{bmatrix} \\ [8mm]
+    A^1 &=& \begin{vmatrix}
+        1 & -1.5 & 1.25 \\
+        0 & 1 & -0.5 \\
+        0 & 0 & 1
+    \end{vmatrix} \times 
+    \left|\begin{array}{rrr}
+        \frac{1}{2} & 0 & 0 \\ [2mm]
+        1 & -\frac{1}{2} & 0 \\ [2mm]
+        1 & -\frac{3}{5} & -\frac{1}{5}
+    \end{array}\right|
+\end{array}\]
+
+\begin{align*}
+    a_{11} &= 1 \times \frac{1}{2} + \left(-\frac{3}{2}\right) \times 1 + \frac{5}{4} \times 1 = \frac{1}{4}   \\
+    a_{12} &= 1 \times 0 +  \left(-\frac{3}{2}\right) \times \left(-\frac{1}{2}\right) + \frac{5}{4} \times \left(-\frac{3}{5}\right) = 0 \\
+    a_{13} &=  1 \times 0 + \left(-\frac{3}{2}\right) \times 0 + \frac{5}{4} \times \left(-\frac{1}{5}\right) = - \frac{1}{4} \\
+    a_{21} &= 0 \times \frac{1}{2} + 1 \times 1 + \left(-\frac{1}{2}\right) \times 1 = \frac{1}{2}   \\
+    a_{22} &=  0 \times 0 + 1 \times \left(-\frac{1}{2}\right) + \left(-\frac{1}{2}\right) \times \left(-\frac{3}{5}\right) = -\frac{1}{5} \\
+    a_{23} &= 0 \times 0 + 1 + \left(-\frac{1}{2}\right) \times \left(-\frac{1}{5}\right) = \frac{1}{10}   \\
+    a_{31} &=  0 \times \frac{1}{2} + 0 \times 1 + 1 \times 1 = 1 \\
+    a_{32} &=  0 \times 0 + 0 \times \left(-\frac{1}{2}\right) + 1 \times \left(-\frac{3}{4}\right) = \dfrac{-3}{5} \\
+    a_{33} &= 0 \times 0 + 0 \times 0 + 1 \times \left(-\frac{1}{5}\right) = -\frac{1}{5}   \\
+\end{align*}
+\[\begin{array}{rrrr}
+    \Rightarrow  & \frac{1}{4} & 0 & -\frac{1}{4} \\ [2mm]
+                 & \frac{1}{2} & -\frac{1}{5} & \frac{1}{10} \\ [2mm]
+                 & 1 & -\frac{3}{5} & -\frac{1}{5} \\ [5mm]
+    \Rightarrow & \boxed{B} & &
+\end{array}\]
+
+\clearpage
+\subsection*{Q 10 Answer: D}
+
+Given system of non-linear equations are 
+\begin{align*}
+    v - u^2 &= 0 \\
+    u^2 + v^2 - 1 &= 0
+\end{align*}
+
+
+
+Let, \( f = v - u^2 = 0 \) and \( g = u^2 + v^2 - 1 = 0 \)
+
+By Jacobian 
+\[ \begin{array}{rcl}
+     J_k &=& \left.\left[\begin{array}{cc} \frac{\partial f}{\partial u} & \frac{\partial f}{\partial v} \\ [2mm] \frac{\partial g}{\partial u} & \frac{\partial g}{\partial v}  \end{array}\right]\right|_{u_k,v_k} = \left[ \begin{array}{rr} -3 u^2 & 1 \\ 2u & 2v \end{array} \right] \\ [2mm]
+     J_{k}^{-1} &=& \dfrac{1}{det[J_k]} [Adj \text{ of } J_k] \\ [4mm]
+\end{array} \]
+
+\[ \begin{array}{ll}
+    \Rightarrow & \begin{bmatrix} u_{n+1} \\ v_{n+1} \end{bmatrix} = \begin{bmatrix} u_n \\ v_n  \end{bmatrix} - \left[\begin{array}{cc} \frac{\partial f}{\partial u} & \frac{\partial f}{\partial v} \\ [2mm] \frac{\partial g}{\partial u} & \frac{\partial g}{\partial v}  \end{array}\right]^{-1} \times f\left(\begin{bmatrix} u_n \\ v_n \end{bmatrix}\right) 
+\end{array} \]
+
+By Newton-Raphson method 
+\[ \begin{array}{ll}
+    \Rightarrow & \begin{bmatrix} u_{n+1} \\ v_{n+1} \end{bmatrix} = \begin{bmatrix} u_n \\ v_n  \end{bmatrix} - \begin{bmatrix} -3u^2 & 1  \\ 2u & 2v  \end{bmatrix}^{-1} \times f\left(\begin{bmatrix} u_n \\ v_n \end{bmatrix}\right) 
+\end{array} \]
+
+
+\underline{\textit{Initial estimation:}}
+
+We have $n=0$, $u=1$, $v=2$.
+
+\[ \begin{array}{ll}
+    \Rightarrow  \begin{bmatrix} u_{1} \\ v_{1} \end{bmatrix} &= \begin{bmatrix} 1 \\ 2  \end{bmatrix} - \begin{bmatrix} -3 & 1  \\ 2 & 4  \end{bmatrix}^{-1} \times f\left(\begin{bmatrix} 1 \\ 2 \end{bmatrix}\right) \\
+    &= \begin{bmatrix} 1 \\ 2  \end{bmatrix} - \begin{bmatrix} -3 & 1  \\ 2 & 4  \end{bmatrix}^{-1} \times \begin{bmatrix} 1 \\ 4 \end{bmatrix} = \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
+\end{array} \]
+
+$\Rightarrow$ $u_1 = 1$  and $v_1 = 1$
+
+\underline{\textit{1$^{st}$ repetition:}}
+
+$n = 1$, $u_1 = 1$, $v_1 = 1$
+
+\[ \begin{array}{ll}
+    \Rightarrow  \begin{bmatrix} u_{2} \\ v_{2} \end{bmatrix} &= \begin{bmatrix} 1 \\ 1  \end{bmatrix} - \begin{bmatrix} -3 & 1  \\ 2 & 2  \end{bmatrix}^{-1} \times f\left(\begin{bmatrix} 1 \\ 1 \end{bmatrix}\right) \\
+    &= \begin{bmatrix} 1 \\ 1  \end{bmatrix} - \begin{bmatrix} -3 & 1  \\ 2 & 2  \end{bmatrix}^{-1} \times \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 0.875 \\ 0.625 \end{bmatrix} 
+\end{array} \]
+
+$\Rightarrow$ $u_2 = 0.875$  and $v_2 = 0.625$
+
+\underline{\textit{2$^{nd}$ repetition:}}
+
+$n = 2$, $u_2 = 0.875$, $v_2 = 0.625$
+
+\[ \begin{array}{ll}
+    \Rightarrow  \begin{bmatrix} u_{3} \\ v_{3} \end{bmatrix} &= \begin{bmatrix} 0.875 \\ 0.625  \end{bmatrix} - \begin{bmatrix} -2.2969 & 1  \\ 1.75 & 1.25  \end{bmatrix}^{-1} \times f\left(\begin{bmatrix} 0.875 \\ 0.625 \end{bmatrix}\right) \\
+    &= \begin{bmatrix} 0.875 \\ 0.625  \end{bmatrix} - \begin{bmatrix} -2.2969 & 1  \\ 1.75 & 1.25  \end{bmatrix}^{-1} \times \begin{bmatrix} -0.0449 \\ 0.1562 \end{bmatrix} = \begin{bmatrix} 0.829 \\ 0.5643 \end{bmatrix} 
+\end{array} \]
+
+
+\underline{\textit{3$^{rd}$ repetition:}}
+
+$n = 3$, $u_3 = 0.829$, $v_3 = 0.5643$
+
+\[ \begin{array}{ll}
+    \Rightarrow  \begin{bmatrix} u_{4} \\ v_{4} \end{bmatrix} &= \begin{bmatrix} 0.829 \\ 0.5463  \end{bmatrix} - \begin{bmatrix} -2.0619 & 1  \\ 1.6581 & 1.1287  \end{bmatrix}^{-1} \times f\left(\begin{bmatrix} 0.829 \\ 0.5643 \end{bmatrix}\right) \\
+    &= \begin{bmatrix} 0.829 \\ 0.5643  \end{bmatrix} - \begin{bmatrix} -2.0619 & 1  \\ 1.6581 & 1.1287  \end{bmatrix}^{-1} \times \begin{bmatrix} -0.0054 \\ 0.0058 \end{bmatrix} = \begin{bmatrix} 0.826 \\ 0.5636 \end{bmatrix} 
+\end{array} \]
+
+\underline{\textit{4$^{th}$ repetition:}}
+
+$n = 4$, $u_4 = 0.826$, $v_4 = 0.5636$
+
+\[ \begin{array}{ll}
+    \Rightarrow  \begin{bmatrix} u_{5} \\ v_{5} \end{bmatrix} &= \begin{bmatrix} 0.826 \\ 0.5636  \end{bmatrix} - \begin{bmatrix} -2.047 & 1  \\ 1.6521 & 1.1272  \end{bmatrix}^{-1} \times f\left(\begin{bmatrix} 0.826 \\ 0.5636 \end{bmatrix}\right) \\
+    &= \begin{bmatrix} 0.826 \\ 0.5636  \end{bmatrix} - \begin{bmatrix} -2.047 & 1  \\ 1.6521 & 1.1272  \end{bmatrix}^{-1} \times \begin{bmatrix} 0 \\ 0 \end{bmatrix} = \begin{bmatrix} 0.826 \\ 0.5636 \end{bmatrix} 
+\end{array} \]
+
+
+$\Rightarrow$ $u = 0.826$  and $v = 0.5636$
+
+\[ \Rightarrow \boxed{D} \]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
