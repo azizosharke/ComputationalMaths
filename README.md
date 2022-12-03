@@ -3,7 +3,7 @@
 
 CSU33081 - Computational Mathematics Assignments :
 
-- [Assignment 1](https://github.com/azizosharke/ComputationalMaths/tree/main/Assignment1) - Using Latex .
+- [Assignment 1](https://github.com/azizosharke/ComputationalMaths/tree/main/Assignment1) - Using Latex.
 
 - [Assignment 2](https://github.com/azizosharke/ComputationalMaths/tree/main/Assignment2) - Using Equation Editior.
 
